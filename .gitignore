@@ -25,3 +25,6 @@ blob-report/
 # OS
 .DS_Store
 Thumbs.db
+
+# Reports
+reports/
