@@ -28,3 +28,6 @@ Thumbs.db
 
 # Reports
 reports/
+
+#env
+.env
