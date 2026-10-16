@@ -12,7 +12,7 @@ class NavBar(DashboardPage):
         self.dashboard_menu = page.get_by_text("Dashboard")
 
         #-----------------Profile sub-menu----------------------------------------------
-        self.prifile_menu = page.get_by_text("Profile")
+        self.profile_menu = page.get_by_text("Profile")
 
         #-----------------Activity sub-menu-------------------------------------------
         self.activity_menu = page.get_by_text("Activity")
@@ -60,7 +60,7 @@ class NavBar(DashboardPage):
         self.hr_menu_add_employee = page.get_by_text("Add Employee")
         
         #---------------------------HR-Employees-Documents-------------------------------------
-        self.hr_documents = page.get_by_text("Documents")
+        self.hr_documents_menu = page.get_by_text("Documents")
         
         #--------------------------------HR-Attendance-------------------------------------------------
         self.hr_menu_attendance = page.locator("span").filter(has_text="Attendance").first()
@@ -84,7 +84,7 @@ class NavBar(DashboardPage):
         self.hr_view_roster = page.get_by_text("View Roster")
 
         #---------------- HR-Shifts-----------------------------------------
-        self.hr_shifts = page.get_by_text("Shifts")
+        self.hr_shifts_menu = page.get_by_text("Shifts")
 
         #----------------------------- HR-Attendance QR-----------------------------------
         self.hr_attendance_qr = page.get_by_text("Attendance QR")
@@ -529,12 +529,87 @@ class NavBar(DashboardPage):
         # Defect Masters
 
     
-    def employeeservice(self):
+    def emp_loyeeservice(self):
         self.employee_service.click()
        
+    def emp_dashboard(self):
+        self.dashboard_menu.click()
 
-        
+    def emp_profile(self):
+        self.profile_menu.click()
+    
+    def emp_activity(self):
+        self.activity.click()
 
+    def emp_attendence(self):
+        self.attendance_menu.click()
+    
+    def emp_leaves(self):
+        self.leaves_menu.click()
+    
+    def emp_comp_off_balance(self):
+        self.comp_off_menu().click()
+    
+    def emp_gatepass_menu(self):
+        self.getepass_menu.click()
+    
+    def emp_shift(self):
+        self.shift_menu.click()
+    
+    def emp_salarys_lip(self):
+        self.salary_menu.click()
+
+    def emp_salary_structure(self):
+        self.salasy_structure_menu.click()
+
+    #================HR module==============================
+    def hr_menu(self):
+        self.hr_main_menu.click()
+    
+    def hr_dashboard(self):
+        self.hr_menu_dashboard.click()
+
+    def hr_employees(self):
+        self.hr_menu_employees.click()
+    
+    def hr_employees_list(self):
+        self.hr_menu_emplist.click()
+
+    def hr_add_employees(self):
+        self.hr_menu_add_employee.click()
+    
+    def hr_documents(self):
+        self.hr_documents_menu.click()
+
+    def hr_attendance(self):
+        self.hr_menu_attendance.click()
+
+    def hr_emp_attendance(self):
+        self.hr_employee_attendance.click()
+    
+    def hr_weekoff_working_menu(self):
+        self.hr_weekoff_working.click()
+
+    def hr_monthly_atten(self):
+        self.hr_monthly_attendance.click()
+
+    def hr_attend_correction(self):
+        self.hr_attendance_correction.click()
+
+    def hr_atten_conf(self):
+        self.hr_attendance_config.click()
+
+    def hr_view_rost(self):
+        self.hr_view_roster.click()
+
+    def hr_shifts(self):
+        self.hr_shifts_menu.click()
+
+    def hr_atten_qr(self):
+        self.hr_attendance_qr.click()
+
+    
+    
 
         
 
