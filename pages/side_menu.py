@@ -39,7 +39,7 @@ class NavBar(DashboardPage):
         self.salary_menu = page.get_by_text("Salary Slip")
 
         #--------------------- Salary Structure sub-menu---------------------------------
-        self.salasy_structure_menu = page.get_by_text("Salary Structure").first()
+        self.salary_structure_menu = page.get_by_text("Salary Structure").first()
        
 
         #==============================HR Module=========================================
@@ -138,13 +138,13 @@ class NavBar(DashboardPage):
         self.hr_announcement = page.locator("span").filter(has_text="Announcement")
 
         #------------------HR- Employment Type----------------------------------
-        self.hr_employee_type = page.get_by_text("Employment Type")
+        self.hr_emplymnt_type = page.get_by_text("Employment Type")
 
 
         #==============================Payroll Module=========================================
 
         #-----------Payroll Management------------------------------------
-        self.payroll_management = page.getByText("Payroll Management")
+        self.pr_payroll_management = page.getByText("Payroll Management")
         
         # Salary Structure
         self.pr_salary_structure = page.get_by_text("Salary Structure").last() 
@@ -608,9 +608,226 @@ class NavBar(DashboardPage):
     def hr_atten_qr(self):
         self.hr_attendance_qr.click()
 
+    def hr_gp_approval(self):
+        self.hr_gatepass_approval.click()
+
+    def hr_ot_policy(self):
+        self.hr_overtime_policies.click()
+
+    def hr_ot_assignment(self):
+        self.hr_overtime_assignment.click()
+
+    def hr_ot_approvals(self):
+        self.hr_overtime_approval.click()
+
+    def hr_ot_summary(self):
+        self.hr_overtime_summary.click()
+
+#=============leave management
+    def hr_leave_mgmt(self):
+        self.hr_leave_management.click()
+
+    def hr_leave_typ(self):
+        self.hr_leave_types.click()
+
+    def hr_leave_inc_coun(self):
+        self.hr_leave_inc_counter.click()
+
+    def hr_leave_app(self):
+        self.hr_leave_applications.click()
+
+    def hr_holiday(self):
+        self.hr_holidays.click()
+
+    def hr_leave_bal(self):
+        self.hr_leave_balance.click()
+
+    def hr_comp_off_bal(self):
+        self.hr_comp_off_balance.click()
+
+    def hr_leave_allo(self):
+        self.hr_leave_allocation.click()
+
+    def hr_aply_leave(self):
+        self.hr_apply_leave.click()
+
+    def hr_org(self):
+        self.hr_organization.click()
+
+    def hr_anno(self):
+        self.hr_announcement.click()
+
+    def hr_emp_type(self):
+        self.hr_emplymnt_type.click()
+
+#================== Payroll Management
     
+    def pr_payroll_mgmt(self):
+        self.pr_payroll_management.click()
+
+    def pr_sal_struct(self):
+        self.pr_salary_structure.click()
+
+    def pr_epf_sett(self):
+        self.pr_epf_setting.click()
+
+    def pr_esic_sett(self):
+        self.pr_esic_setting.click()
     
+    def pr_pro_tax(self):
+        self.pr_professional_tax.click()
+
+    def pr_pay_earn_elemnt(self):
+        self.pr_pay_earning_elements.click()
+
+    def pr_deduc_elemnt(self):
+        self.pr_deduction_element.click()
+
+    def pr_satu_bonus(self):
+        self.pr_satutory_bonus.click()
+
+    def pr_grat_sett(self):
+        self.pr_gratuity_setting.click()
+
+    def pr_pay_run(self):
+        self.pr_payroll_run.click()
+
+    def pr_bank_acc(self):
+        self.pr_bank_account.click()
+
+#======== Admin
+
+    def super_admin_menu(self):
+        self.admin_menu.click()
+
+    def adm_roles(self):
+        self.admin_roles.click()
+
+    def adm_users(self):
+        self.admin_users.click()
+
+    def adm_branch(self):
+        self.admin_branch.click()
+
+    def adm_depart(self):
+        self.admin_department.click()
+
+    def adm_desig(self):
+        self.admin_designation.click()
+
+    def adm_doc_format(self):
+        self.admin_doc_format.click()
+
+    def adm_gl_acc(self):
+        self.admin_gl_account.click()
+
+    def adm_comp_detail(self):
+        self.admin_company_detail.click()
+
+    def adm_addi_conf(self):
+        self.admin_addi_conf.click()
+
+#============Kiosk
+
+    def ksk_menu(self):
+        self.kiosk.click()
+
+    def ksk_scan(self):
+        self.kiosk_scanner.click()
+
+    def ksk_leaves(self):
+        self.kiosk_leaves.click()
+
+    def ksk_gatepass(self):
+        self.kiosk_gatepass.click()
+
+#========Inventory Management
+
+    def inv_mgmt_menu(self):
+        self.inventory_mgmt.click()
+
+    def inv_items(self):
+        self.inventory_items.click()
+
+    def inv_stock(self):
+        self.inventory_stock.click()
+    
+    def inv_st_entry(self):
+        self.inv_st_stock_entry.click() 
+        
+    def inv_st_m_conv(self):
+        self.inv_st_material_conv.click()
+    
+    def inv_st_stock_hist(self):
+        self.inv_st_stock_history.click()
+
+    def inv_st_goods_in_tran(self):
+        self.inv_st_goods_in_transit.click()
+
+    def inv_st_stock_valu(self):
+        self.inv_st_stock_valuation.click()
+
+    def inv_st_rej_stock(self):
+        self.inv_st_rejected_stock.click()
+
+    def inv_st_cy_count(self):
+        self.inv_st_cycle_count.click()
+
+    def inv_po_main_menu(self):
+        self.inv_purchase_Order.click()
+
+    def inv_po_cu_req(self):
+        self.inv_po_cust_req.click()
+
+    def inv_po_req(self):
+        self.inv_po_request.click()
+
+    def inv_po_ordr(self):
+        self.inv_po_order.click()
+    
+    def inv_po_gr(self):
+        self.inv_po_grn.click()
+
+    def inv_po_bils(self):
+        self.inv_po_bills.click()
+
+    def inv_po_bill_pay(self):
+        self.inv_po_bill_pay.click()
+
+    def inv_po_debit_not(self):
+        self.inv_po_debit_note.click()
+
+    def inv_so_main(self):
+        self.inv_sales_order.click()
+
+    def inv_so_pro_inv(self):
+        self.inv_so_proforma.click()
+
+    def inv_so_ordr(self):
+        self.inv_so_order.click()
+
+    def inv_so_deliv_challan(self):
+        self.inv_so_delivery_challan.click()
+
+    def inv_so_materi_out(self):
+        self.inv_so_material_out.click()
+
+    def inv_so_invo(self):
+        self.inv_so_invoice.click()
+
+    def inv_so_paymnt_received(self):
+        self.inv_so_payment_received.click()
+
+    def inv_so_crdt_note(self):
+        self.inv_so_credit_note.click()
+
+    def inv_so_pickup(self):
+        self.inv_so_pickup_list.click()
+
+    def inv_return_repl(self):
+        self.inv_return_replace.click()
+
+    def inv_clients(self):
+        self.inv_client_cust.click()
 
         
-
-
