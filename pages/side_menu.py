@@ -367,7 +367,7 @@ class NavBar(DashboardPage):
         self.inv_fr_sales_target = page.locator("//span[normalize-space()='Sales Targets']")
 
         # Sales Target Report
-        self._inv_fr_sales_target_report = page.locator("//span[normalize-space()='Sales Target Report']")
+        self.inv_fr_sales_target_report = page.locator("//span[normalize-space()='Sales Target Report']")
 
         # Reconciliation
         self.inv_reconcialiation = page.locator("//span[normalize-space()='Reconciliation']")
@@ -830,4 +830,173 @@ class NavBar(DashboardPage):
     def inv_clients(self):
         self.inv_client_cust.click()
 
-        
+    def inv_accoun(self):
+        self.inv_account.click()
+
+    def inv_acc_jo_entry(self):
+        self.inv_acc_journal_ent.click()
+
+    def inv_acc_daybook(self):
+        self.inv_acc_day_book.click()
+
+    def inv_acc_gl_led(self):
+        self.inv_acc_gl_ledger.click()
+
+    def inv_acc_acc_led(self):
+        self.inv_acc_acc_ledger.click()
+
+    def inv_acc_bankbook(self):
+        self.inv_acc_bank_book.click()
+
+    def inv__fin_fin_rep(self):
+        self.inv_financial_report.click()
+
+    def inv_fin_trial_bal(self):
+        self.inv_fr_trial_balance.click()
+
+    def inv_fin_pr_n_loss(self):
+        self.inv_fr_profit_n_loss.click()
+
+    def inv_fin_bal_sheet(self):
+        self.inv_fr_balance_sheet.click()
+
+    def inv_fin_cus_stmnt(self):
+        self.inv_fr_cus_statement.click()
+
+    def inv_fin_supp_stmnt(self):
+        self.inv_fr_supplier_stat.click()
+
+    def inv_fin_ar_aging(self):
+        self.inv_fr_ar_aging.click()
+    
+    def inv_fin_ap_aging(self):
+        self.inv_fr_ap_aging.click()
+
+    def inv_fin_comiss_rep(self):
+        self.inv_fr_comission_rep.click()
+    
+    def inv_fin_sales_tar(self):
+        self.inv_fr_sales_target.click()
+
+    def inv_fin_sales_tar_rep(self):
+        self.inv_fr_sales_target_report.click()
+
+    def inv_reco_main(self):
+        self.inv_reconcialiation.click()
+    
+    def inv_reco_inv_to_gl(self):
+        self.inv_reco_inven2glreco.click()
+
+    def inv_reco_gr_ir_reco(self):
+        self.inv_reco_grir_reco.click()
+
+    def inv_reco_bank_rec(self):
+        self.inv_reco_bank_reco.click()
+    
+    def inv_reco_lcnrv_pro(self):
+        self.inv_reco_lcnrv.click()
+
+#==========GST Report
+    def inv_gst_repo_main(self):
+        self.inv_gst_repo.click()
+
+    def inv_gstr1(self):
+        self.inv_gst_gstr1.click()
+
+    def inv_gstr2b(self):
+        self.inv_gst_gstr2b.click()
+    
+    def inv_gstr3b(self):
+        self.inv_gst_gstr3b.click()
+
+#=========Inventory Settings
+    def inv_set_menu(self):
+        self.inv_settings.click()
+
+    def inv_set_stores(self):
+        self.inv_sett_stores.click()
+    
+    def inv_set_measur_unit(self):
+        self.inv__sett_measuring_unit.click()
+
+    def inv_set_item_typs(self):
+        self.inv_sett_item_types.click()
+
+    def inv_set_hsn(self):
+        self.inv_sett_hsn_code.click()
+
+    def inv_set_def(self):
+        self.inv_sett_default.click()
+
+    def inv_set_comm(self):
+        self.inv_sett_commission.click()
+
+#========== Lead Management
+    def ld_mgmt_lead_menu(self):
+        self.lead_management.click()
+
+    def ld_mgmt_leads(self):
+        self.lm_leads.click()
+
+    def ld_mgmt_leads_follow(self):
+        self.lm_lead_follow_up.click()
+
+    def ld_mgmt_recent_follow(self):
+        self.lm_recent_follow_up.click()
+
+    def ld_mgmt_lead_expe(self):
+        self.lm_lead_exp.click()
+
+    def ld_mgmt_sett(self):
+        self.lm_settings.click()
+
+    def ld_mgmt_sett_source(self):
+        self.lm_sett_source.click()
+
+    def ld_mgmt_sett_status(self):
+        self.lm_sett_status.click()
+
+    def ld_mgmt_sett_sub_status(self):
+        self.lm_sett_sub_status.click()
+
+    def ld_mgmt_sett_typ(self):
+        self.lm_sett_type.click()
+
+    def ld_mgmt_sett_segment(self):
+        self.lm_sett_segment.click()
+
+    def ld_mgmt_sett_class(self):
+        self.lm_sett_class.click()
+
+    def ld_mgmt_sett_lead_status(self):
+        self.lm_sett_lead_status.click()
+
+    def ld_mgmt_sett_city(self):
+        self.lm_sett_city.click()
+
+    def ld_mgmt_sett_tehsil(self):
+        self.lm_sett_tehsil.click()
+
+    def ld_mgmt_sett_priority(self):
+        self.lm_sett_priority.click()
+
+#=========== Sales trip
+
+    def st_menu(self):
+        self.sales_salestrip.click()
+    
+    def st_trips_menu(self):
+        self.sales_trips.click()
+
+    def st_day_map(self):
+        self.sales_day_map.click()
+
+    def st_visits(self):
+        self.sales_visits.click()
+
+    def st_expenses(self):
+        self.sales_expen.click()
+
+#=========== Manufacturing
+
+  
