@@ -10,7 +10,7 @@ def logged_in(page):
 
     login_page = LoginPage(page)
 
-    login_page.navigate(BASE_URL)
+    login_page.navigate()
     login_page.login(VALID_MOBILE, VALID_PASSWORD)
 
     return page

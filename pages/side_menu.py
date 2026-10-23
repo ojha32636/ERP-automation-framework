@@ -6,7 +6,7 @@ class NavBar(DashboardPage):
         self.page = page
         
         #--------------Employee Service Main-Menu Bar-------------------------------------
-        self.employee_service = page.getByText("Employee Service")
+        self.employee_service = page.get_by_text("Employee Service")
 
         #--------------- Dashboard sub-menu---------------------------------------------
         self.dashboard_menu = page.get_by_text("Dashboard")
@@ -21,13 +21,13 @@ class NavBar(DashboardPage):
         self.attendance_menu = page.get_by_text("Attendance")
 
         #-------------------------Attendance Correction sub-menu----------------------------
-        self.attendance_correction_menu = page.get_by_text("Attendance Correction").first()
+        self.attendance_correction_menu = page.get_by_text("Attendance Correction").nth(0)
 
         #------------------------Leaves sub-menu-----------------------------------
         self.leaves_menu = page.get_by_text("Leaves")
 
         #---------------------Comp Off Balance sub-menu--------------------------------------
-        self.comp_off_menu = page.get_by_text("Comp Off Balance").first()
+        self.comp_off_menu = page.get_by_text("Comp Off Balance").nth(0)
 
         #-------------------------- GatePass sub-menu----------------------------------------
         self.getepass_menu = page.get_by_text("GatePass")
@@ -39,16 +39,16 @@ class NavBar(DashboardPage):
         self.salary_menu = page.get_by_text("Salary Slip")
 
         #--------------------- Salary Structure sub-menu---------------------------------
-        self.salary_structure_menu = page.get_by_text("Salary Structure").first()
+        self.salary_structure_menu = page.get_by_text("Salary Structure").nth(0)
        
 
         #==============================HR Module=========================================
         
         #-----------------HR module Menu ---------------------------------
-        self.hr_main_menu = page.getByText("HR")
+        self.hr_main_menu = page.get_by_text("HR")
         
         #-----------------HR - Dashboard-------------------------------------------------------
-        self.hr_menu_dashboard = page.locator("span").filter(has_text="Dashboard").first()        
+        self.hr_menu_dashboard = page.locator("span").filter(has_text="Dashboard").nth(0)        
         
         #--------------------HR-Employees------------------------------------------------------
         self.hr_menu_employees = page.locator(":text-is('Employees')")           
@@ -63,7 +63,7 @@ class NavBar(DashboardPage):
         self.hr_documents_menu = page.get_by_text("Documents")
         
         #--------------------------------HR-Attendance-------------------------------------------------
-        self.hr_menu_attendance = page.locator("span").filter(has_text="Attendance").first()
+        self.hr_menu_attendance = page.locator("span").filter(has_text="Attendance").nth(0)
         
         #---------------------HR- Employee Attendance------------------------------------------------------
         self.hr_employee_attendance = page.get_by_text("Employee Attendance")
@@ -75,7 +75,7 @@ class NavBar(DashboardPage):
         self.hr_monthly_attendance = page.get_by_text("Monthly Attendance")
 
         #----------------------------------------- HR-Attendance Correction-------------------------------
-        self.hr_attendance_correction = page.get_by_text("Attendance Correction").last()
+        self.hr_attendance_correction = page.get_by_text("Attendance Correction").nth(1)
 
         #---------------------------- HR-Attendance Configuration------------------------------------------
         self.hr_attendance_config = page.get_by_text("Attendance Configuration")
@@ -123,7 +123,7 @@ class NavBar(DashboardPage):
         self.hr_leave_balance = page.get_by_text("Leave Balance")
 
         #--------------------------HR- Comp Off Balance--------------------------------
-        self.hr_comp_off_balance = page.get_by_text("Comp Off Balance").last()
+        self.hr_comp_off_balance = page.get_by_text("Comp Off Balance").nth(1)
         
         #----------------------- HR-Leave Allocation------------------------------
         self.hr_leave_allocation = page.get_by_text("Leave Allocation")
@@ -144,10 +144,10 @@ class NavBar(DashboardPage):
         #==============================Payroll Module=========================================
 
         #-----------Payroll Management------------------------------------
-        self.pr_payroll_management = page.getByText("Payroll Management")
+        self.pr_payroll_management = page.get_by_text("Payroll Management")
         
         # Salary Structure
-        self.pr_salary_structure = page.get_by_text("Salary Structure").last() 
+        self.pr_salary_structure = page.get_by_text("Salary Structure").nth(1)
 
         # EPF Setting
         self.pr_epf_setting = page.get_by_text("EPF Setting")
@@ -499,35 +499,91 @@ class NavBar(DashboardPage):
     #==============================Manufacturing Module=========================================
     
         # Manufacturing main menu
-        # Dashboard
-        # Planning
-        # Forcast Entries
-        # Production Schedule
-        # Material Requests
-        # Production
-        # Bill Of Materials
-        # Work Orders
-        # Job Cards
-        # Production Entries
-        # Quality
-        # QC Dashboard
-        # QC Inbox
-        # Inspections
-        # NCR
-        # Concessions
-        # Release Status
-        # Shop Floor
-        # Workstations
-        # Machines & Lines
-        # Working Hours
-        # Machine Load
-        # Maintenance 
-        # Downtime Logs
-        # Masters
-        # Operations
-        # Inspection Plans
-        # Defect Masters
+        self.manufacturing = page.get_by_text("Manufacturing")
 
+        # Dashboard
+        self.manuf_dash = page.locator("//a[@href='/manufacturing/dashboard']//span[contains(text(),'Dashboard')]")
+
+        # Planning
+        self.manuf_plan = page.get_by_text("Planning")
+
+        # Forcast Entries
+        self.manuf_forcast = page.get_by_text("Forecast Entries")
+        
+        # Production Schedule
+        self.manuf_prod_sch = page.get_by_text("Production Schedule")
+
+        # Material Requests
+        self.manuf_material_req = page.get_by_text("Material Requests")
+
+        # Production
+        self.manuf_prod = page.locator(":text-is('Production')")
+
+        # Bill Of Materials
+        self.manuf_bill_of_mat = page.get_by_text("Bill of Materials")
+
+        # Work Orders
+        self.manuf_work_order = page.get_by_text("Work Orders")
+
+        # Job Cards
+        self.manuf_job_card = page.get_by_text("Job Cards")
+
+        # Production Entries
+        self.manuf_prod_entries = page.get_by_text("Production Entries")
+
+        # Quality
+        self.manuf_quality = page.get_by_text("Quality")
+
+        # QC Dashboard
+        self.manuf_qc_dash = page.get_by_text("QC Dashboard")
+
+        # QC Inbox
+        self.manuf_qc_inbox = page.get_by_text("QC Inbox")
+
+        # Inspections
+        self.manuf_inspections = page.get_by_text("Inspections")
+
+        # NCR
+        self.manuf_ncr = page.get_by_text("NCR")
+
+        # Concessions
+        self.manuf_concessions = page.get_by_text("Concessions")
+
+        # Release Status
+        self.manuf_release_status = page.get_by_text("Release Status")
+
+        # Shop Floor
+        self.manuf_shop_floor = page.get_by_text("Shop Floor")
+
+        # Workstations
+        self.manuf_workstation = page.get_by_text("Workstations (Plants)")
+
+        # Machines & Lines
+        self.manuf_machine_lines = page.get_by_text("Machines & Lines")
+
+        # Working Hours
+        self.manuf_working_hrs = page.get_by_text("Working Hours")
+
+        # Machine Load
+        self.manuf_machine_load = page.get_by_text("Machine Load")
+
+        # Maintenance 
+        self.manuf_maintenance = page.get_by_text("Maintenance")
+        
+        # Downtime Logs
+        self.manuf_downtime_logs = page.get_by_text("Downtime Logs")
+
+        # Masters
+        self.manuf_masters = page.locator(":text-is('Masters')")
+
+        # Operations
+        self.manuf_operations = page.locator("span").filter(has_text="Operations")
+
+        # Inspection Plans
+        self.manuf_inspection = page.get_by_text("Inspection Plans")
+
+        # Defect Masters
+        self.manuf_defect_master = page.get_by_text("Defect Masters")
     
     def emp_loyeeservice(self):
         self.employee_service.click()
@@ -747,188 +803,305 @@ class NavBar(DashboardPage):
         self.inventory_mgmt.click()
 
     def inv_items(self):
-        self.inventory_items.click()
+        self.inventory_mgmt.click() #open parent menu
+        self.inventory_items.click() #open item menu
 
     def inv_stock(self):
+        self.inventory_mgmt.click() #open parent menu
         self.inventory_stock.click()
     
     def inv_st_entry(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inventory_stock.click() #open parent menu
         self.inv_st_stock_entry.click() 
         
     def inv_st_m_conv(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inventory_stock.click() #open parent menu
         self.inv_st_material_conv.click()
     
     def inv_st_stock_hist(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inventory_stock.click() #open parent menu
         self.inv_st_stock_history.click()
 
     def inv_st_goods_in_tran(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inventory_stock.click() #open parent menu
         self.inv_st_goods_in_transit.click()
 
     def inv_st_stock_valu(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inventory_stock.click() #open parent menu
         self.inv_st_stock_valuation.click()
 
     def inv_st_rej_stock(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inventory_stock.click() #open parent menu
         self.inv_st_rejected_stock.click()
 
     def inv_st_cy_count(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inventory_stock.click() #open parent menu
         self.inv_st_cycle_count.click()
 
     def inv_po_main_menu(self):
+        self.inventory_mgmt.click() #open parent menu
         self.inv_purchase_Order.click()
 
     def inv_po_cu_req(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_purchase_Order.click()        
         self.inv_po_cust_req.click()
 
     def inv_po_req(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_purchase_Order.click()
         self.inv_po_request.click()
 
     def inv_po_ordr(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_purchase_Order.click()
         self.inv_po_order.click()
     
     def inv_po_gr(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_purchase_Order.click()
         self.inv_po_grn.click()
 
     def inv_po_bils(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_purchase_Order.click()
         self.inv_po_bills.click()
 
     def inv_po_bill_pay(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_purchase_Order.click()
         self.inv_po_bill_pay.click()
 
     def inv_po_debit_not(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_purchase_Order.click()
         self.inv_po_debit_note.click()
 
     def inv_so_main(self):
-        self.inv_sales_order.click()
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_sales_order.click()#open parent menu
 
     def inv_so_pro_inv(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_sales_order.click()#open parent menu
         self.inv_so_proforma.click()
 
     def inv_so_ordr(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_sales_order.click()#open parent menu
         self.inv_so_order.click()
 
     def inv_so_deliv_challan(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_sales_order.click()#open parent menu
+        
         self.inv_so_delivery_challan.click()
 
     def inv_so_materi_out(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_sales_order.click()#open parent menu
+       
         self.inv_so_material_out.click()
 
     def inv_so_invo(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_sales_order.click()#open parent menu
+        
         self.inv_so_invoice.click()
 
     def inv_so_paymnt_received(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_sales_order.click()#open parent menu
+        
         self.inv_so_payment_received.click()
 
     def inv_so_crdt_note(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_sales_order.click()#open parent menu
+      
         self.inv_so_credit_note.click()
 
     def inv_so_pickup(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_sales_order.click()#open parent menu
+        
         self.inv_so_pickup_list.click()
 
     def inv_return_repl(self):
+        self.inventory_mgmt.click() #open parent menu
         self.inv_return_replace.click()
 
     def inv_clients(self):
+        self.inventory_mgmt.click() #open parent menu
         self.inv_client_cust.click()
 
     def inv_accoun(self):
+        self.inventory_mgmt.click() #open parent menu
         self.inv_account.click()
 
     def inv_acc_jo_entry(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_account.click()       
         self.inv_acc_journal_ent.click()
 
     def inv_acc_daybook(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_account.click()
         self.inv_acc_day_book.click()
 
     def inv_acc_gl_led(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_account.click()
         self.inv_acc_gl_ledger.click()
 
     def inv_acc_acc_led(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_account.click()
         self.inv_acc_acc_ledger.click()
 
     def inv_acc_bankbook(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_account.click()
         self.inv_acc_bank_book.click()
 
     def inv__fin_fin_rep(self):
+        self.inventory_mgmt.click() #open parent menu
         self.inv_financial_report.click()
 
     def inv_fin_trial_bal(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_financial_report.click()
         self.inv_fr_trial_balance.click()
 
     def inv_fin_pr_n_loss(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_financial_report.click()
         self.inv_fr_profit_n_loss.click()
 
     def inv_fin_bal_sheet(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_financial_report.click()
         self.inv_fr_balance_sheet.click()
 
     def inv_fin_cus_stmnt(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_financial_report.click()
         self.inv_fr_cus_statement.click()
 
     def inv_fin_supp_stmnt(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_financial_report.click()
         self.inv_fr_supplier_stat.click()
 
     def inv_fin_ar_aging(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_financial_report.click()
         self.inv_fr_ar_aging.click()
     
     def inv_fin_ap_aging(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_financial_report.click()
         self.inv_fr_ap_aging.click()
 
     def inv_fin_comiss_rep(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_financial_report.click()
         self.inv_fr_comission_rep.click()
     
     def inv_fin_sales_tar(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_financial_report.click()
         self.inv_fr_sales_target.click()
 
     def inv_fin_sales_tar_rep(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_financial_report.click()
         self.inv_fr_sales_target_report.click()
 
     def inv_reco_main(self):
+        self.inventory_mgmt.click() #open parent menu
         self.inv_reconcialiation.click()
     
     def inv_reco_inv_to_gl(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_reconcialiation.click()
         self.inv_reco_inven2glreco.click()
 
     def inv_reco_gr_ir_reco(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_reconcialiation.click()
         self.inv_reco_grir_reco.click()
 
     def inv_reco_bank_rec(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_reconcialiation.click()
         self.inv_reco_bank_reco.click()
     
     def inv_reco_lcnrv_pro(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_reconcialiation.click()
         self.inv_reco_lcnrv.click()
 
 #==========GST Report
     def inv_gst_repo_main(self):
+        self.inventory_mgmt.click() #open parent menu
         self.inv_gst_repo.click()
 
     def inv_gstr1(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_gst_repo.click()
         self.inv_gst_gstr1.click()
 
     def inv_gstr2b(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_gst_repo.click()
         self.inv_gst_gstr2b.click()
     
     def inv_gstr3b(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_gst_repo.click()
         self.inv_gst_gstr3b.click()
 
 #=========Inventory Settings
     def inv_set_menu(self):
+        self.inventory_mgmt.click() #open parent menu
         self.inv_settings.click()
 
     def inv_set_stores(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_settings.click()
         self.inv_sett_stores.click()
     
     def inv_set_measur_unit(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_settings.click()
         self.inv__sett_measuring_unit.click()
 
     def inv_set_item_typs(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_settings.click()
         self.inv_sett_item_types.click()
 
     def inv_set_hsn(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_settings.click()
         self.inv_sett_hsn_code.click()
 
     def inv_set_def(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_settings.click()
         self.inv_sett_default.click()
 
     def inv_set_comm(self):
+        self.inventory_mgmt.click() #open parent menu
+        self.inv_settings.click()
         self.inv_sett_commission.click()
 
 #========== Lead Management
@@ -999,4 +1172,90 @@ class NavBar(DashboardPage):
 
 #=========== Manufacturing
 
-  
+    def manuf_manuf_menu(self):
+        self.manufacturing.click()
+
+    def manuf_dashboard(self):
+        self.manuf_dash.click()
+
+    def manuf_planing(self):
+        self.manuf_plan.click()
+
+    def manuf_forcast_ent(self):
+        self.manuf_forcast.click()
+
+    def manuf_prod_sche(self):
+        self.manuf_prod_sch.click()
+
+    def manuf_material(self):
+        self.manuf_material_req.click()
+
+    def manuf_production(self):
+        self.manuf_prod.click()
+
+    def manuf_bill_of_material(self):
+        self.manuf_bill_of_mat.click()
+
+    def manuf_work_ordr(self):
+        self.manuf_work_order.click()
+
+    def manuf_job(self):
+        self.manuf_job_card.click()
+
+    def manuf_prod_ent(self):
+        self.manuf_prod_entries.click()
+
+    def manuf_quality_menu(self):
+        self.manuf_quality.click()
+
+    def manuf_qc_dash_menu(self):
+        self.manuf_qc_dash.click()
+
+    def manuf_qc_inbox_menu(self):
+        self.manuf_qc_inbox.click()
+
+    def manuf_inspections_menu(self):
+        self.manuf_inspections.click()
+
+    def manuf_ncr_menu(self):
+        self.manuf_ncr.click()
+    
+    def manuf_concessions_menu(self):
+        self.manuf_concessions.click()
+
+    def manuf_release_status_menu(self):
+        self.manuf_release_status.click()
+
+    def manuf_shop_floor_menu(self):
+        self.manuf_shop_floor.click()
+
+    def manuf_workstation_menu(self):
+        self.manuf_workstation.click()
+
+    def manuf_machine_n_lines(self):
+        self.manuf_machine_lines.click()
+
+    def manuf_work_hrs(self):
+        self.manuf_working_hrs.click()
+
+    def manuf_machine_loads_menu(self):
+        self.manuf_machine_load.click()
+
+    def manuf_maintenance_menu(self):
+        self.manuf_maintenance.click()
+
+    def manuf_down_time_log_menu(self):
+        self.manuf_downtime_logs.click()
+
+    def manuf_masters_menu(self):
+        self.manuf_masters.click()
+
+    def manuf_operations_menu(self):
+        self.manuf_operations.click()
+
+    def manuf_inspection_plan_menu(self):
+        self.manuf_inspections.click()
+
+    def manuf_defect_master_menu(self):
+        self.manuf_defect_master.click()
+    
